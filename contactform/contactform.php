@@ -1,6 +1,5 @@
 <?php
 if($_POST){
-
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
@@ -13,6 +12,8 @@ if($_POST){
 	    'X-Mailer' => 'PHP/' . phpversion()
 	);
 	//send email
-    mail($to, $subject." - (".$name.")", $message, $headers);
+	mail($to, $subject." - (".$name.")", $message, $headers);
+	echo true;
 }
+echo false;
 ?>

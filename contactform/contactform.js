@@ -95,8 +95,8 @@ jQuery(document).ready(function($) {
       url: "contactform/contactform.php",
       data: str,
       success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
+        //alert(msg);
+        if (msg == true) {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
