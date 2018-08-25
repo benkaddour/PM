@@ -243,13 +243,16 @@
         <div class="row">
           <div class="col-lg-6 text-center text-lg-left">
             <h3 class="cta-title">Vous êtes interréssés par le projet ? Souscriver à la newsletter !</h3>
-            <p class="cta-text">Vous serez informés par l'ouverture procahine de la plateforme.</p>
+            <p class="cta-text">Vous serez informés par l'ouverture prochaine de la plateforme.</p>
           </div>
           <div class="col-lg-6 text-center">
             <div class="subcription-info text-center">
-        <form class="subscribe_form" action="#" method="post">
-          <input required="" value="" placeholder="Entrer votre email" class="email" id="email" name="email" type="email">
-          <input class="subscribe" name="email" value="Valider" type="submit">
+        <form class="subscribe_form" method="post" id="newsletter">
+          <input required placeholder="Entrer votre email" class="email" id="email" name="email" type="email">
+          <input class="subscribe" id="newsletter_submit" name="email" value="Valider" type="submit">
+          <div id="sendnewsletter">Votre email a bien été enregistré !</div>
+          <div id="samenewsletter">Votre email a déja été enregistré. </div>
+          <div id="errornewsletter">Une erreur est survenue lors de l'envoie de l'enregitrement de votre email.</div>
         </form>
       </div>
           </div>
@@ -481,7 +484,7 @@
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+
 
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/counterup/counterup.min.js"></script>

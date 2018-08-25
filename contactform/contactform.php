@@ -15,5 +15,8 @@ if($_POST){
 	mail($to, $subject." - (".$name.")", $message, $headers);
 	echo true;
 }
-echo false;
+else {
+	echo false;
+}
+
 ?>

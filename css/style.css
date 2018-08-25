@@ -1004,6 +1004,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #2dc997;
   color: #fff;
 }
+#sendnewsletter {
+  color: white;
+  border: 1px solid #2dc997;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+#errornewsletter, #samenewsletter {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+}
 
 #contact .form #sendmessage {
   color: #2dc997;
@@ -1025,7 +1043,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 15px;
 }
 
-#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show, #errornewsletter.show, #sendnewsletter.show, #samenewsletter.show {
   display: block;
 }
 

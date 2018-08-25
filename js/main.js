@@ -116,7 +116,7 @@ jQuery(document).ready(function( $ ) {
     time: 1000
   });
 
-
+/*
   //Google Map
   var get_latitude = $('#google-map').data('latitude');
   var get_longitude = $('#google-map').data('longitude');
@@ -135,7 +135,7 @@ jQuery(document).ready(function( $ ) {
     });
   }
   google.maps.event.addDomListener(window, 'load', initialize_google_map);
-
+*/
 // custom code
     // Countdown
     if ($('#countdown').length) { 

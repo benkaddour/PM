@@ -1,6 +1,43 @@
 jQuery(document).ready(function($) {
   "use strict";
 
+  //newsletter
+  $('#newsletter_submit').click(function(){
+    var email = $('#email').val();
+    if (/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(email)) {
+      $.ajax({
+        type: "POST",
+        url: "contactform/newsletter.php",
+        data:  "email=" + email,
+        success: function(msg) {
+          if (msg == true){
+            $("#sendnewsletter").addClass("show");
+            $("#samenewsletter").removeClass("show");
+            $("#errornewsletter").removeClass("show");
+          }
+          else if (msg == false)  {
+            $("#samenewsletter").addClass("show");
+            $("#errornewsletter").removeClass("show");
+            $("#sendnewsletter").removeClass("show");
+          }
+          else {
+            $("#errornewsletter").addClass("show");
+            $("#samenewsletter").removeClass("show");
+            $("#sendnewsletter").removeClass("show");
+            $("#errornewsletter").html(msg);
+          }
+        }
+      });
+      return false;
+    } else {
+        $("#errornewsletter").addClass("show");
+        $("#samenewsletter").removeClass("show");
+        $("#sendnewsletter").removeClass("show");
+        $("#errornewsletter").html("Votre adresse e-mail '" + email + "' est invalide.");
+        return false;
+    }
+  });
+
   //Contact
   $('form.contactForm').submit(function() {
     var f = $(this).find('.form-group'),
@@ -90,6 +127,7 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
     else var str = $(this).serialize();
+
     $.ajax({
       type: "POST",
       url: "contactform/contactform.php",
