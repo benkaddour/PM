@@ -147,10 +147,11 @@ jQuery(document).ready(function( $ ) {
                     var $days = data.days;
                 }
                 $(this.el).html(
-                    '<div class="day">' + this.leadingZeros($days) + ' <span>Days</span></div>'+
-                    '<div class="hour">' + this.leadingZeros(data.hours, 2) + ' <span>Hours</span></div>'+
+                    "<h6>Ouverture de la plateforme web dans :</h6>"+
+                    '<div class="day">' + this.leadingZeros($days) + ' <span>Jours</span></div>'+
+                    '<div class="hour">' + this.leadingZeros(data.hours, 2) + ' <span>Heures</span></div>'+
                     '<div class="min">' + this.leadingZeros(data.min, 2) + ' <span>Minutes</span></div>'+
-                    '<div class="sec">' + this.leadingZeros(data.sec, 2) + ' <span>Seconds</span></div>'
+                    '<div class="sec">' + this.leadingZeros(data.sec, 2) + ' <span>Secondes</span></div>'
                 );
             }
         });
